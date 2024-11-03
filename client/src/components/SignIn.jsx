@@ -15,13 +15,13 @@ const Container = styled.div`
   gap: 36px;
 `;
 const Title = styled.div`
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 800;
   color: ${({ theme }) => theme.primary};
 `;
 const Span = styled.div`
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   color: ${({ theme }) => theme.text_secondary + 90};
 `;
 const TextButton = styled.div`
@@ -96,18 +96,18 @@ const SignIn = () => {
   return (
     <Container>
       <div>
-        <Title>Welcome to Krist 👋</Title>
-        <Span>Please login with your details here</Span>
+        <Title>Welcome to B & B Mart! </Title>
+        <Span>-------Please login with customer details-------</Span>
       </div>
       <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
         <TextInput
-          label="Email Address"
+          label="Email Address *"
           placeholder="Enter your email address"
           value={email}
           handelChange={(e) => setEmail(e.target.value)}
         />
         <TextInput
-          label="Password"
+          label="Password *"
           placeholder="Enter your password"
           password
           value={password}

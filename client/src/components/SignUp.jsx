@@ -90,24 +90,24 @@ const SignUp = ({ setOpenAuth }) => {
   return (
     <Container>
       <div>
-        <Title>Create New Account 👋</Title>
-        <Span>Please enter details to create a new account</Span>
+        <Title># Create New Account #</Title>
+        <Span>Please enter customer details to create a new account</Span>
       </div>
       <div style={{ display: "flex", gap: "20px", flexDirection: "column" }}>
         <TextInput
-          label="Full Name"
+          label="Full Name *"
           placeholder="Enter your full name"
           value={name}
           handelChange={(e) => setName(e.target.value)}
         />
         <TextInput
-          label="Email Address"
+          label="Email Address *"
           placeholder="Enter your email address"
           value={email}
           handelChange={(e) => setEmail(e.target.value)}
         />
         <TextInput
-          label="Password"
+          label="Password *"
           placeholder="Enter your password"
           password
           value={password}

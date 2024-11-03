@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import HeaderImage from "../utils/Images/Header.png";
+import HeaderImage from "../utils/Images/Header.jpg";
 import { category } from "../utils/data";
 import ProductCategoryCard from "../components/cards/ProductCategoryCard";
 import ProductCard from "../components/cards/ProductCard";
@@ -28,7 +28,7 @@ const Section = styled.div`
   gap: 28px;
 `;
 const Img = styled.img`
-  width: 90%;
+  width: 130%;
   height: 700px;
   object-fit: cover;
   max-width: 1200px;
@@ -36,6 +36,7 @@ const Img = styled.img`
 
 const Title = styled.div`
   font-size: 28px;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
   display: flex;
   justify-content: ${({ center }) => (center ? "center" : "space-between")};
@@ -77,7 +78,7 @@ const Home = () => {
         <Img src={HeaderImage} />
       </Section>
       <Section>
-        <Title>Shop by Categories</Title>
+        <Title center>-Shop by Category-</Title>
         <CardWrapper>
           {category.map((category) => (
             <ProductCategoryCard category={category} />
@@ -85,7 +86,7 @@ const Home = () => {
         </CardWrapper>
       </Section>
       <Section>
-        <Title center>Our Bestseller</Title>
+        <Title center>-Happy Customer-</Title>
         <CardWrapper>
           {products.map((product) => (
             <ProductCard product={product} />

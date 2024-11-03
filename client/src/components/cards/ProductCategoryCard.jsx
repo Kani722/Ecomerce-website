@@ -60,22 +60,6 @@ const Button = styled.div`
     padding: 6px 14px;
   }
 `;
-const Sale = styled.div`
-  position: absolute;
-  z-index: 10;
-  color: ${({ theme }) => theme.text_primary};
-  top: 10px;
-  right: 10px;
-  font-size: 12px;
-  font-weight: 600;
-  color: white;
-  background: green;
-  padding: 3px 6px;
-  border-radius: 4px;
-  @media (max-width: 600px) {
-    font-size: 10px;
-  }
-`;
 
 const ProductCategoryCard = ({ category }) => {
   const navigate = useNavigate();
@@ -86,7 +70,6 @@ const ProductCategoryCard = ({ category }) => {
         <Menu>
           <Button>{category.name}</Button>
         </Menu>
-        <Sale>{category.off}</Sale>
       </Top>
     </Card>
   );

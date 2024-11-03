@@ -39,14 +39,16 @@ const NavLogo = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 0 6px;
+  padding: 10 6px;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
   color: inherit;
 `;
 const Logo = styled.img`
-  height: 34px;
+  margin-top: 50px;
+  margin-left: 20px;
+  height: 50px;
 `;
 const NavItems = styled.ul`
   width: 100%;
@@ -179,7 +181,7 @@ const Navbar = ({ openAuth, setOpenAuth, currentUser }) => {
             <Navlink onClick={() => setIsOpen(!isOpen)} to="/Orders">
               Orders
             </Navlink>
-            <Navlink onClick={() => setIsOpen(!isOpen)} to="/Contact">
+            <Navlink onClick={() => setIsOpen(!isOpen)} to="/ContactPage">
               Contact
             </Navlink>
             {currentUser ? (
@@ -194,14 +196,10 @@ const Navbar = ({ openAuth, setOpenAuth, currentUser }) => {
               >
                 <Button
                   text="Sign Up"
-                  outlined
-                  small
-                  onClick={() => setOpenAuth(!openAuth)}
+                  outlined small onClick={() => setOpenAuth(!openAuth)}
                 />
                 <Button
-                  text="Sign In"
-                  small
-                  onClick={() => setOpenAuth(!openAuth)}
+                  text="Sign In" small onClick={() => setOpenAuth(!openAuth)}
                 />
               </div>
             )}
@@ -235,7 +233,7 @@ const Navbar = ({ openAuth, setOpenAuth, currentUser }) => {
             </>
           ) : (
             <Button
-              text="SignIn"
+              text="Sign In"
               small
               onClick={() => setOpenAuth(!openAuth)}
             />
@@ -270,7 +268,7 @@ const Navbar = ({ openAuth, setOpenAuth, currentUser }) => {
             </>
           ) : (
             <Button
-              text="SignIn"
+              text="Sign In"
               small
               onClick={() => setOpenAuth(!openAuth)}
             />

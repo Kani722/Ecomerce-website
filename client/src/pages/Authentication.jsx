@@ -2,7 +2,7 @@ import { Modal } from "@mui/material";
 import React, { useState } from "react";
 import styled from "styled-components";
 import LogoImage from "../utils/Images/Logo.png";
-import AuthImage from "../utils/Images/AuthImage.png";
+import AuthImage from "../utils/Images/AuthImage.jpg";
 import { Close } from "@mui/icons-material";
 import SignIn from "../components/SignIn";
 import SignUp from "../components/SignUp";
@@ -22,15 +22,16 @@ const Left = styled.div`
 `;
 
 const Logo = styled.img`
+  height: 70px;
   position: absolute;
   top: 40px;
-  left: 60px;
+  left: 10px;
   z-index: 10;
 `;
 const Image = styled.img`
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 90%;
   object-fit: cover;
 `;
 
@@ -51,6 +52,7 @@ const Right = styled.div`
 const CloseButton = styled.div`
   position: absolute;
   top: 20px;
+  color: red;
   right: 20px;
   border-radius: 50%;
   padding: 2px;
@@ -88,7 +90,7 @@ const Authentication = ({ openAuth, setOpenAuth }) => {
   return (
     <Modal open={openAuth} onClose={() => setOpenAuth(false)}>
       <Container>
-        <Left>
+        <Left>  
           <Logo src={LogoImage} />
           <Image src={AuthImage} />
         </Left>
@@ -101,7 +103,7 @@ const Authentication = ({ openAuth, setOpenAuth }) => {
               <SignIn setOpenAuth={setOpenAuth} />
               <Text>
                 {" "}
-                Don't have an account ?{" "}
+                New to B & B Mart? {" "}
                 <TextButton onClick={() => setLogin(false)}>Sign Up</TextButton>
               </Text>
             </>

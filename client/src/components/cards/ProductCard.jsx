@@ -219,7 +219,7 @@ const ProductCard = ({ product }) => {
   return (
     <Card>
       <Top>
-        <Image src={product?.img} />
+        <Image src="https://images.pexels.com/photos/7129153/pexels-photo-7129153.jpeg?auto=compress&cs=tinysrgb&w=600"/>
         <Menu>
           <MenuItem
             onClick={() => (favorite ? removeFavorite() : addFavorite())}
